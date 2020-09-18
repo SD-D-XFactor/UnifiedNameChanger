@@ -2,10 +2,10 @@
 
 ## Team Members
 
-Brooke Baer
-Hao Jiang
-Ryan Lu
-Brass Perkins
+* Brooke Baer
+* Hao Jiang
+* Ryan Lu
+* Brass Perkins
 
 ## Team Name
 
