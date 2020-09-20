@@ -73,7 +73,7 @@ The scope of the project is restricted to RPI, and as such will only be directly
 
 ## Project Risks
 
-THere are very few risks, but the risks that do exist are accidental removal from an email list/missing essential information due to email not being properly updated, or leakage of RPI login information or name-change related documentation.
+There are very few risks, but the risks that do exist are accidental removal from an email list/missing essential information due to email not being properly updated, or leakage of RPI login information or name-change related documentation.
 
 \pagebreak
 
@@ -377,9 +377,9 @@ Student.
 
 Student: Wants to update legal name in administrative database.
 
-Registrar: updates legal name.
+Registrar: Updates legal name.
 
-Other Administrators: need to know legal name for financial aid, bursar, etc.
+Other Administrators: Need to know legal name for financial aid, bursar, etc.
 
 Professors: Need to know what to call student.
 
@@ -533,7 +533,7 @@ DotCIO Support Center: Updates name in DotCIO ticketing system.
 3. Student uploads legal documentation detailing name change into system.
 4. Student inputs legal name into system.
 5. Student inputs phone number.
-6. DotCIO Support Center receives ticket
+6. DotCIO Support Center receives ticket.
 7. DotCIO Support Center delegates staff member to handle ticket.
 8. DotCIO Support Center verifies documentation
 9. DotCIO Support Center changes student's legal name in ticketing system.
@@ -631,7 +631,7 @@ Diploma Printing Company: Need to know name to print on new diploma, ships diplo
 3. Student is provided with diploma reorder form.
 4. Student fills out diploma reorder form.
 5. Student notarizes form.
-6. Student returns form, old diploma, and payment to registrar.
+6. Student returns form, old diploma, and payment to Registrar.
 7. Registrar receives form, old diploma, and payment.
 8. Registrar confirms form is filled out properly and notarized.
 9. Registrar puts in order for new diploma.
@@ -640,11 +640,11 @@ Diploma Printing Company: Need to know name to print on new diploma, ships diplo
 
 ## Extensions
 
-7a: Student fills out form incorrectly, registrar informs student, return to step 4.
+7a: Student fills out form incorrectly, Registrar informs student, return to step 4.
 
-7b: Student doesn't properly notarize form, registrar informs student, return to step 5.
+7b: Student doesn't properly notarize form, Registrar informs student, return to step 5.
 
-7c. If student doesn't return diploma, registrar informs student. Either student returns to step 6, or if student still doesn't return diploma, registrar continues and informs student that new diploma will be marked as duplicate.
+7c. If student doesn't return diploma, Registrar informs student. Either student returns to step 6, or if student still doesn't return diploma, Registrar continues and informs student that new diploma will be marked as duplicate.
 
 7d. Form is lost in mail, use case fails.
 
