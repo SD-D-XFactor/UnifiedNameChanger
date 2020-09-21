@@ -13,9 +13,9 @@ The X Factor
 
 ## Meeting Schedule
 
-Wednesdays, 1400-1600
+Wednesdays, 14:00-16:00
 
-Thursdays: 1855-2045
+Thursdays: 18:55-20:45
 
 ## Meeting Information
 
@@ -93,14 +93,14 @@ Professors: Need to know students in classes
 
 ## Success Scenario
 
-1. Student logs into application with RCSID and password.
-2. Student selects preferred name change in system.
+1. Student selects preferred name change in system.
+2. Student logs into application with RCSID and password.
 3. Student inputs preferred name.
 4. System changes preferred name in LMS.
 
 ## Extensions
 
-4a: Student enters incorrect login information, return to Step 1.
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 4b: Student misspells preferred name, return to step 3.
 
@@ -140,14 +140,15 @@ Administration: Need to know student preferred name in order to properly address
 
 ## Success Scenario
 
-1. Student logs into application with RCSID and password.
-2. Student selects preferred name change in system.
+
+1. Student selects preferred name change in system.
+2. Student logs into application with RCSID and password.
 3. Student inputs preferred name.
 4. System changes preferred name in RPI's directory.
 
 ## Extensions
 
-4a: Student enters incorrect login information, return to Step 1.
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 4b: Student misspells preferred name, return to step 3.
 
@@ -185,14 +186,14 @@ Administration: Need to know student preferred name in order to properly address
 
 ## Success Scenario
 
-1. Student logs into application with RCSID and password.
-2. Student selects preferred name change in system.
+1. Student selects preferred name change in system.
+2. Student logs into application with RCSID and password.
 3. Student inputs preferred name.
 4. System changes preferred name in RPI's housing system
 
 ## Extensions
 
-4a: Student enters incorrect login information, return to Step 1.
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 4b: Student misspells preferred name, return to step 3.
 
@@ -232,14 +233,14 @@ Professors: Need to know what to call student.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password
-2. Student selects preferred name change in system.
+1. Student selects preferred name change in system.
+2. Student logs into appliation with RCSID and password.
 3. Student inputs preferred name into application.
 4. Application accesses Submitty's name update function and updates name.
 
 ## Extensions
 
-4a: Student enters incorrect RCSID or password, student returns to step 1.
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 4b: Student enters incorrect preferred name, student returns to step 3.
 
@@ -281,14 +282,14 @@ Professors: Need to know what to call student.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password
-2. Student selects preferred name change in system.
+1. Student selects preferred name change in system.
+2. Student logs into application with RCSID and password.
 3. Student inputs preferred name into application.
 4. System inputs preferred name into WebEx profile.
 
 ## Extensions
 
-4a: Student enters incorrect RCSID or password, student returns to step 1.
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 4b: Student enters incorrect preferred name, student returns to step 3.
 
@@ -334,14 +335,14 @@ Fraternities/Sororities: Need to know best name to refer to student.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password
-2. Student selects preferred name change in system.
+1. Student selects preferred name change in system.
+2. Student logs into application with RCSID and password.
 3. Student inputs preferred name into application.
 4. System inputs preferred name into Roundcube.
 
 ## Extensions
 
-4a: Student enters incorrect RCSID or password, student returns to step 1.
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 4b: Student enters incorrect preferred name, student returns to step 3.
 
@@ -385,8 +386,8 @@ Professors: Need to know what to call student.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password
-2. Student selects legal name change in system.
+1. Student selects legal name change in system.
+2. Student logs into application with RCSID and password.
 3. Student uploads legal documentation detailing name change into system.
 4. Student inputs legal name into system.
 5. System sends automated email to registrar.
@@ -395,7 +396,7 @@ Professors: Need to know what to call student.
 
 ## Extensions
 
-5a: Student inputs incorrect login information, return to step 1.
+5a: Student enters incorrect RCSID and/or password, student returns to step 2.
 
 6a: Student provides insufficient/incorrect documentation, registrar notifies student, student returns to step 3.
 
@@ -431,19 +432,18 @@ Campus Card Office: Updates name on ID card, issues new ID card.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password.
-2. Student selects new ID card in system.
-3. Student is linked to campus card name change form.
-4. Student completes form, including legal documentation.
-5. Campus card office recieves and processes name change request form.
-6. Campus card office prints new ID card
-7. Campus card office alerts Student via email.
+1. Student selects new ID card in system.
+2. Student is linked to campus card name change form.
+3. Student completes form, including legal documentation.
+4. Campus card office recieves and processes name change request form.
+5. Campus card office prints new ID card
+6. Campus card office alerts Student via email.
 
 ## Extensions
 
 3a: Form is down, use case fails.
 
-5a: Student provides incorrect information on form, campus card office does not approve form, return to step 4.
+4a: Student provides incorrect information on form, campus card office does not approve form, return to step 3.
 
 ## Preconditions
 
@@ -479,8 +479,8 @@ CDPHP: Updates name on CDPHP insurance card after RPI Health Center updates heal
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password.
-2. Student selects legal name change in system.
+1. Student selects legal name change in system.
+2. Student logs into application with RCSID and password.
 3. Student uploads legal documentation detailing name change into system.
 4. Student inputs legal name into system.
 5. System sends automated email to RPI Health Center.
@@ -490,7 +490,7 @@ CDPHP: Updates name on CDPHP insurance card after RPI Health Center updates heal
 
 ## Extensions
 
-5a: Student inputs incorrect login information, return to step 1.
+5a: Student inputs incorrect login information, return to step 2.
 
 6a: Student provides insufficient/incorrect documentation, RPI Health Center notifies student, student returns to step 3.
 
@@ -528,8 +528,8 @@ DotCIO Support Center: Updates name in DotCIO ticketing system.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password.
-2. Student selects legal name change in system.
+1. Student selects legal name change in system.
+2. Student logs into application with RCSID and password.
 3. Student uploads legal documentation detailing name change into system.
 4. Student inputs legal name into system.
 5. Student inputs phone number.
@@ -540,7 +540,7 @@ DotCIO Support Center: Updates name in DotCIO ticketing system.
 
 ## Extensions
 
-6a: Student inputs incorrect login information, return to step 1.
+6a: Student inputs incorrect login information, return to step 2.
 
 6b: Ticketing system is down, use case fails.
 
@@ -576,8 +576,8 @@ DotCIO Support Center: Updates name in WebEx.
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password.
-2. Student selects legal name change in system.
+1. Student selects legal name change in system.
+2. Student logs into application with RCSID and password.
 3. Student uploads legal documentation detailing name change into system.
 4. Student inputs legal name into system.
 5. Student inputs phone number.
@@ -588,7 +588,7 @@ DotCIO Support Center: Updates name in WebEx.
 
 ## Extensions
 
-6a: Student inputs incorrect login information, return to step 1.
+6a: Student inputs incorrect login information, return to step 2.
 
 6b: Ticketing system is down, use case fails.
 
@@ -614,11 +614,11 @@ Student's name is updated in WebEx.
 
 ## Primary Actor
 
-Student.
+Former student.
 
 ## Stakeholders and Interests
 
-Student: Wants reissued diploma.
+Former student: Wants reissued diploma.
 
 Registrar: Needs to order new diploma.
 
@@ -626,27 +626,26 @@ Diploma Printing Company: Need to know name to print on new diploma, ships diplo
 
 ## Success Scenario
 
-1. Student logs into appliation using RCSID and password.
-2. Student selects diploma reissue in system.
-3. Student is provided with diploma reorder form.
-4. Student fills out diploma reorder form.
-5. Student notarizes form.
-6. Student returns form, old diploma, and payment to Registrar.
-7. Registrar receives form, old diploma, and payment.
-8. Registrar confirms form is filled out properly and notarized.
-9. Registrar puts in order for new diploma.
-10. Printing company prints diploma.
-11. Printing company sends diploma to student.
+1. Student selects diploma reissue in system.
+2. Student is provided with diploma reorder form.
+3. Student fills out diploma reorder form.
+4. Student notarizes form.
+5. Student returns form, old diploma, and payment to Registrar.
+6. Registrar receives form, old diploma, and payment.
+7. Registrar confirms form is filled out properly and notarized.
+8. Registrar puts in order for new diploma.
+9. Printing company prints diploma.
+10. Printing company sends diploma to student.
 
 ## Extensions
 
-7a: Student fills out form incorrectly, Registrar informs student, return to step 4.
+6a. Form is lost in mail, use case fails.
 
-7b: Student doesn't properly notarize form, Registrar informs student, return to step 5.
+6b. If student doesn't return diploma, Registrar informs student. Either student returns to step 6, or if student still doesn't return diploma, Registrar continues and informs student that new diploma will be marked as duplicate.
 
-7c. If student doesn't return diploma, Registrar informs student. Either student returns to step 6, or if student still doesn't return diploma, Registrar continues and informs student that new diploma will be marked as duplicate.
+7a: Student fills out form incorrectly, Registrar informs former student, return to step 3.
 
-7d. Form is lost in mail, use case fails.
+7b: Student doesn't properly notarize form, Registrar informs former student, return to step 4.
 
 ## Preconditions
 
