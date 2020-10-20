@@ -1,8 +1,3 @@
----
-header-includes: |
-    \usepackage{hhline}
----
-
 # Team Logistics
 
 ## Team Members
@@ -11,7 +6,7 @@ header-includes: |
 * Hao Jiang - Researcher. The Researcher is responsible to gather information of what software tools and design patterns may help with project development.
 * Brass Perkins - Quality Assurance. Quality Assurance tests the project and makes certain that it meets design specifications.
 * Ryan Lu - Team Leader. The Team Leader is responsible for team coordination and is the key point of contact for the team.
-* Toluwaleke Semowo - [Role]. [Role Description]
+* Toluwaleke Semowo - Software Engineer. The Software Engineer is responsible for ensuring the implementation of the software required for demos and the final product.
 
 ## Team Name
 
@@ -67,8 +62,55 @@ We have further identified the following risks:
 
 * Authorization between systems failing
 * Instability of application leading to crashes or user frustration
-* Uncertainty of time distribution in project making it difficult t% Please add the following required packages to your document preamble:
-% 
+* Uncertainty of time distribution in project making it difficult to visualize when the project will be able to be completed.
+
+## Use Case 1: Update Preferred Name in LMS
+
+### Primary Actor
+
+Student.
+
+### Stakeholders and Interests
+
+Student: Wants to update preferred name in LMS.
+
+Other Students: Need to know how to refer to their classmates.
+
+Professors: Need to know students in classes
+
+### Success Scenario
+
+1. Student selects preferred name change in system.
+2. Student logs into application with RCSID and password.
+3. Student inputs preferred name.
+4. System changes preferred name in LMS.
+
+### Extensions
+
+4a: Student enters incorrect RCSID and/or password, student returns to step 2.
+
+4b: Student misspells preferred name, return to step 3.
+
+4c: LMS is down, use case fails.
+
+### Preconditions
+
+Student is a student at RPI.
+
+Student has an LMS account.
+
+### Minimal Guarantees
+
+Student is still a student.
+
+Student still has an LMS account.
+
+### Success Guarantees
+
+Student's name is updated in LMS.
+
+\pagebreak
+
 ## Use Case 2: Update Preferred Name in RPI's Directory
 
 ### Primary Actor
@@ -195,7 +237,7 @@ Professors: Need to know what to call student.
 
 Student is a student.
 
-Student has a Submitty account.
+Stu-dent has a Submitty account.
 
 ### Minimal Guarantees
 
@@ -608,6 +650,7 @@ Student was a student.
 
 Student receives updated diploma.
 
+\pagebreak
 
 ## Table of Requirements
 
@@ -615,7 +658,11 @@ Student receives updated diploma.
 
 ## Deployment Diagram
 
+![](deployment.png)
+
 ## Domain Model Diagram
+
+![](domainmodel.png)
 
 ## Project Schedule and Work Breakdown Structure
 
