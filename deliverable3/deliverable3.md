@@ -79,7 +79,7 @@ We have described how team members have contributed to the deliverables in the n
 
 ## High Level Description of System Design
 
-Unified Name Changer aims to unify the separate systems of RPI’s preferred and legal name change systems, as well as provide a simple way to access the form to get your diploma changed after a legal name change. In order to do this, we will have a “starter” function that will call one of three possible options. Two options, legal and preferred name change, have a common interface. The third option, diploma reissue, will be unique, as it can only lead you to the form, not fill it out for you (as it is a physical form which must be mailed in.) The two name change options will access all the disparate RPI name change methods, and complete them all. This will result in the preferred name change system accessing all different interfaces (such as LMS, Roundcube, Submitty, and Webex) and changing the preferred name in all of them, while the legal name change system will craft all necessary emails given the name change documentation, and send notices of name change to all different departments at RPI. After the legal name change system crafts all the emails, the user will have to do follow-ups in their email inbox, but it kickstarts the process, saving the user time.
+Unified Name Changer aims to unify the separate systems of RPI’s preferred and legal name change systems, as well as provide a simple way to access the form to get your diploma changed after a legal name change. In order to do this, we will have a “starter” function that will call one of three possible options. Two options, legal and preferred name change, have a common interface. The third option, diploma reissue, will be unique. It will fill in the information on the form, then provide a filled out PDF to print and get notarized. The two name change options will access all the disparate RPI name change methods, and complete them all. This will result in the preferred name change system accessing all different interfaces (such as LMS, Roundcube, Submitty, and Webex) and changing the preferred name in all of them, while the legal name change system will craft all necessary emails given the name change documentation, and send notices of name change to all different departments at RPI. After the legal name change system crafts all the emails, the user will have to do follow-ups in their email inbox, but it kickstarts the process, saving the user time.
 
 ## Use Case 1: Update Preferred Name in LMS
 
@@ -631,8 +631,7 @@ Diploma Printing Company: Need to know name to print on new diploma, ships diplo
 ### Success Scenario
 
 1. Student selects diploma reissue in system.
-2. Student is provided with diploma reorder form.
-3. Student fills out diploma reorder form.
+2. Student is provided with filled out diploma reorder form.
 4. Student notarizes form.
 5. Student returns form, old diploma, and payment to Registrar.
 6. Registrar receives form, old diploma, and payment.
@@ -673,7 +672,7 @@ Student receives updated diploma.
 
 We changed from having public variables to having private variables with public setters/getters. This is to better protect variables from being changed unintentionally where they shouldn’t be. 
 Additionally, we changed from having three different functions that would be called to one function that would use booleans to determine which class to call. This change was implemented due to the fact that we already had these booleans, so we were reducing complexity while maintaining feature parity.
-We also changed the Legal and Preferred Name Analysis Classes, adding a infoBlock structure variable to both Legal and Preferred Name, and adding webex username and password variables to preferred name. We changed how they act as well, with both having the same functions. This was informed by the design, but did change the analysis.
+We also changed the Legal, Preferred, and Diploma Name Analysis Classes, adding a infoBlock structure variable to all, adding webex username and password variables to preferred name, and all the information required for the Diploma PDF to diploma name. We changed how they act as well, with all having the same functions. This was informed by the design, but did change the analysis.
 
 ## Original Analysis Class
 
