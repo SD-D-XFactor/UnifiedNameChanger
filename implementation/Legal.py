@@ -1,18 +1,38 @@
-import smtplib,ssl,string,getpass, email
+import smtplib,ssl,string,getpass, email, sys, re
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from string import ascii_letters, digits
+
+def CheckSymbols(name):
+    regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+    if(regex.search(name) == None):
+        return False
+    else:
+        return True
 
 
+def EmailAll(name,username,password,document,phoneNumber,rin,mode):
 
-
-def email_all1(name,username,password1,document,phoneNumber,rin,mode):
+    name_has_digit = any(map(str.isdigit,name))
+    if(name_has_digit == True):
+        return ("Invalid name has digits!")
+    elif (CheckSymbols(name)):
+        return ("Invalid name has special characters!")
+    elif(len(phoneNumber) > 10 or len(phoneNumber) < 10):
+        return ("Invalid length of the phone number!")
+    elif(len(rin) > 9 or len(rin) < 9):
+        return ("Invalid length of student rin!")
+    
+    
+    
+    
     sendtohealth = "healthcenter@rpi.edu"
     sendtoregistrar = "registrar@rpi.edu"
     sendtodotcio = "itssc@support.rpi.edu"
-    sendtowebex = ""
-    sendtoemailcard = ""
+    sendtowebex = "itssc@support.rpi.edu"
+    sendtoemailcard = "campuscard@rpi.edu"
     sendto = sendtohealth + "," + sendtoregistrar + "," + sendtodotcio + "," + sendtowebex + "," + sendtoemailcard
     sendto1 = "jianghao98@yahoo.com," + "jiang10901@gmail.com"
     
@@ -86,7 +106,7 @@ def email_all1(name,username,password1,document,phoneNumber,rin,mode):
         server.quit()
 
 #seperate functions or just one function with modes to check the places to send emails to?
-def email_dotcio(name,username,password1,document,phoneNumber,rin):
+def EmailDotCio(name,username,password1,document,phoneNumber,rin):
     sendto = "itssc@support.rpi.edu"
     smtp_server = "mail.rpi.edu"
     smtp_port = 587
@@ -151,5 +171,5 @@ if __name__ == "__main__":
     mode = list_of_option[int(choice)]
     
     
-    email_all1(name,username,password,document,phoneNumber,rin,mode)
+    EmailAll(name,username,password,document,phoneNumber,rin,mode)
 
