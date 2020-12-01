@@ -3,7 +3,7 @@ import sys
 sys.path.append("..")
 import nameInterface
 
-class PreferredNew:
+class PreferredName:
     def __init__(self):
         self.infoblock = {
             "name": "", # SHOULD BE FULL NAME, NOT JUST FIRST

@@ -44,7 +44,7 @@ const puppeteer = require('puppeteer');
     ]).catch(() => {
         page.close();
         browser.close();
-        console.log("Incorrect username or password!")
+        console.log("Failed to click input button")
         process.exit(-1);
     });
 
@@ -56,7 +56,7 @@ const puppeteer = require('puppeteer');
     ]).catch(() => {
         page.close();
         browser.close();
-        console.log("Failed to navigate to personal")
+        console.log("Incorrect username or password!")
         process.exit(-1);
     });
 
