@@ -1,7 +1,15 @@
 # Dependencies
 
+Python:
  - pyinstaller
  - dearpygui
- - requests
+ - Naked
  - reportlab
  - pdfrw
+
+Node.JS:
+ - puppeteer
+ - command-line-args
+
+Other Programs:
+ - Chrome
