@@ -2,9 +2,9 @@
 
 Python:
  - pyinstaller
- - dearpygui
+ - tkinter
+ - tkcalendar
  - Naked
- - reportlab
  - pdfrw
 
 Node.JS:

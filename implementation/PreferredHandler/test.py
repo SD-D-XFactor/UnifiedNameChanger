@@ -17,6 +17,12 @@ class PreferredTestCase(unittest.TestCase):
     def test_fail_webex(self):
         result = preferredBackend.changeWebex("Brooke Baer", "baerb", "fakePass")
         self.assertEqual(result, False)
+    
+    def test_fail_all(self):
+        change = preferredBackend.PreferredName()
+        change.takeInformation("Brooke Baer", "baerb", "fakePass", "baerb", "fakePass", "baerb", "fakePass")
+        result = change.submitNameChange()
+        self.assertEqual(result, [1, 2, 3, 4])
 
 """
 There is no way to unit-test success without revealing my log-in information.
