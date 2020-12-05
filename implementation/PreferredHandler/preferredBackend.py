@@ -7,19 +7,19 @@ class PreferredName:
     def __init__(self):
         self.infoblock = {
             "name": "", # SHOULD BE FULL NAME, NOT JUST FIRST
-            "rcsid": "",
+            "casun": "",
             "pword": ""
         }
-    def takeInformation(self, name: str, rcsid: str, pword: str) -> bool:
+    def takeInformation(self, name: str, casun: str, pword: str) -> bool:
         """
             Overrides NameInterface.take_information()
             If any required fields are blank, return False, otherwise, return True
         """
-        if (name == "" or rcsid == "" or pword == ""):
+        if (name == "" or casun == "" or pword == ""):
             return False
         self.infoblock = {
             "name": name,
-            "rcsid": rcsid, 
+            "casun": casun, 
             "pword": pword
         }
         return True
@@ -30,16 +30,16 @@ class PreferredName:
             Return [] if successful, and the function number(s) that failed otherwise
         """
         failed = []
-        if not changeCas(self.infoblock["name"], self.infoblock["rcsid"], 
+        if not changeCas(self.infoblock["name"], self.infoblock["casun"], 
                             self.infoblock["pword"]):
             failed.append(1)
-        if not changeRoundcube(self.infoblock["name"], self.infoblock["rcsid"], 
+        if not changeRoundcube(self.infoblock["name"], self.infoblock["casun"], 
                                 self.infoblock["pword"]):
             failed.append(2)
-        if not changeSubmitty(self.infoblock["name"], self.infoblock["rcsid"], 
+        if not changeSubmitty(self.infoblock["name"], self.infoblock["casun"], 
                                 self.infoblock["pword"]):
             failed.append(3)
-        if not changeWebex(self.infoblock["name"], self.infoblock["rcsid"], 
+        if not changeWebex(self.infoblock["name"], self.infoblock["casun"], 
                             self.infoblock["pword"]):
             failed.append(4)
         return failed
