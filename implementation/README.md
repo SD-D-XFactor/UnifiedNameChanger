@@ -1,15 +1,11 @@
 # Dependencies
 
 Python:
- - pyinstaller
  - tkinter
  - tkcalendar
  - Naked
- - pdfrw
 
-Node.JS:
- - puppeteer
- - command-line-args
+See readme in PreferredHandler folder! That will tell you how to install the node dependencies.
 
 Other Programs:
  - Chrome
