@@ -47,11 +47,7 @@ class PrefChangeInfo():
         self.name=""
         self.cas_uname = ""
         self.cas_pword = ""
-        self.submitty_uname=""
-        self.submitty_pword=""
-        self.webex_uname=""
-        self.webex_pword=""
-    
+
     def setName(self, name):
         self.name = name
     
@@ -61,29 +57,17 @@ class PrefChangeInfo():
     def setCasPWord(self, pword):
         self.cas_pword = pword
     
-    def setSubmittyUName(self, uname):
-        self.cas_uname = uname
-    
-    def setSubmittyPWord(self, pword):
-        self.submitty_pword = pword
-
-    def setWebexUName(self, uname):
-        self.webex_uname = uname
-    
-    def setWebexPWord(self, pword):
-        self.webex_uname = pword
-    
     def getName(self):
         return self.name
     
     def getCas(self):
         return (self.cas_uname, self.cas_pword)
     
-    def getSubmitty(self):
-        return (self.submitty_uname, self.submitty_pword)
+    # def getSubmitty(self):
+    #     return (self.submitty_uname, self.submitty_pword)
     
-    def getWebex(self):
-        return (self.webex_uname, self.webex_pword)
+    # def getWebex(self):
+    #     return (self.webex_uname, self.webex_pword)
 
 #Model for the DiplomaChange frame. It holds all the diploma info that the user has inputted
 class DipChangeInfo():
@@ -93,6 +77,8 @@ class DipChangeInfo():
         self.dipDict = {}
     def setInfo(self, dict):
         self.dipDict = dict
+    def getInfo(self):
+        return dict
 
 class nameChanger(tk.Tk):
     #"root" class. Holds all the models, and handles changing of the frames
@@ -139,7 +125,7 @@ class nameChanger(tk.Tk):
             self.geometry("380x120")
 
         if page_name == "PrefFrame":
-            self.geometry("400x220")
+            self.geometry("380x150")
         
         elif page_name == "LegalFrame":
                 self.geometry("430x145")
@@ -287,12 +273,6 @@ class PrefFrame(tk.Frame):
 
         self.cas_uname = tk.StringVar()
         self.cas_pword = tk.StringVar()
-
-        self.submitty_uname = tk.StringVar()
-        self.submitty_pword = tk.StringVar()
-
-        self.webex_uname = tk.StringVar()
-        self.webex_pword = tk.StringVar()
         
         self.cas_uname_label = tk.Label(self, text="CAS Username:")
         self.cas_uname_entry = tk.Entry(self, textvariable = self.cas_uname)
@@ -307,36 +287,6 @@ class PrefFrame(tk.Frame):
         
         self.cas_pword_label.grid(column = 1, row = 3, padx=5)
         self.cas_pword_entry.grid(column=2, row = 3)
-
-        #submitty
-        self.submitty_uname_label = tk.Label(self, text="Submitty Username:")
-        self.submitty_uname_entry = tk.Entry(self, textvariable = self.submitty_uname)
-        self.submitty_uname.trace_add("write", lambda x, y, z: self.setSubmittyUName(self.submitty_uname))
-
-        self.submitty_pword_label = tk.Label(self, text="Submitty Password:")
-        self.submitty_pword_entry = tk.Entry(self, show="*", textvariable = self.submitty_pword)
-        self.submitty_pword.trace_add("write", lambda x, y, z: self.setSubmittyPWord(self.submitty_pword))
-
-        self.submitty_uname_label.grid(column = 1, row = 4, padx=5)
-        self.submitty_uname_entry.grid(column=2, row = 4)
-        
-        self.submitty_pword_label.grid(column = 1, row = 5, padx=5)
-        self.submitty_pword_entry.grid(column=2, row = 5)
-
-        #webex
-        self.webex_uname_label = tk.Label(self, text="Webex Username:")
-        self.webex_uname_entry = tk.Entry(self, textvariable = self.webex_uname)
-        self.webex_uname.trace_add("write", lambda x, y, z: self.setWebexUName(self.webex_uname))
-
-        self.webex_pword_label = tk.Label(self, text="Webex Password:")
-        self.webex_pword_entry = tk.Entry(self, show = "*", textvariable = self.webex_pword)
-        self.webex_pword.trace_add("write", lambda x, y, z: self.setWebexPWord(self.webex_pword))
-
-        self.webex_uname_label.grid(column = 1, row = 6, padx=5)
-        self.webex_uname_entry.grid(column=2, row = 6)
-        
-        self.webex_pword_label.grid(column = 1, row = 7, padx=5)
-        self.webex_pword_entry.grid(column=2, row = 7)
       
         button = tk.Button(self, text="Enter >")
         button.grid(column = 2, row = 8, pady = 10)
