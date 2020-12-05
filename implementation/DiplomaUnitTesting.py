@@ -19,24 +19,24 @@ class TestDiploma(unittest.TestCase):
         'description': "Name has Changed",
         'returned': True,
         'payment': "Cash",
-        'adress': "95 High St, Limestone, ME 04750"}
+        'address': "95 High St, Limestone, ME 04750"}
         CreatePdf(data)
         form = pdfrw.PdfReader('filled.pdf')
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[0]['first'], "John")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[1]['middle'], "D.")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[2]['last'], "Doe")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[3]['degree'], "Bachelors")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[4]['curriculum'], "Computer Science")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[5]['dateDegree'], "1/1/2016")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[6]['identificationTail'], "0000")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[7]['birthDate'], "1/1/2000")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[8]['dates'], "1/1/2012-1/2/2012")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[9]['email'], "doej@rpi.edu")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[10]['phone'], "(000)-000-0000")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[12]['description'], "Name has Changed")
-        self.assertTrue(form.Root.Pages.Kids[0].Annots[13]['*'])
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[15]['payment'], "Cash")
-        self.assertEqual(form.Root.Pages.Kids[0].Annots[17]['adress'], "95 High St, Limestone, ME 04750")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[0]['/V'], "John")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[1]['/V'], "D.")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[2]['/V'], "Doe")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[3]['/V'], "Bachelors")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[4]['/V'], "Computer Science")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[5]['/V'], "1/1/2016")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[6]['/V'], "0000")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[7]['/V'], "1/1/2000")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[8]['/V'], "1/1/2012-1/2/2012")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[9]['/V'], "doej@rpi.edu")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[10]['/V'], "(000)-000-0000")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[12]['/V'], "Name has Changed")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[13]['/V'], "*")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[15]['/V'], "Cash")
+        self.assertEqual(form.Root.Pages.Kids[0].Annots[17]['/V'], "95 High St, Limestone, ME 04750")
 
     def test_AlternateValues(self):
         data = {'first': "John",
@@ -51,7 +51,7 @@ class TestDiploma(unittest.TestCase):
         'phone': "(000)-000-0000",
         'returned': True,
         'payment': "Cash",
-        'adress': "95 High St, Limestone, ME 04750"}
+        'address': "95 High St, Limestone, ME 04750"}
         CreatePdf(data)
         form = pdfrw.PdfReader('filled.pdf')
         self.assertEqual(form.Root.Pages.Kids[0].Annots[0]['/V'], "John")
